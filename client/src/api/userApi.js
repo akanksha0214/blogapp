@@ -1,7 +1,7 @@
 import axios from "axios";
 
 const API = axios.create({
-  baseURL: "http://localhost:3000/", // adjust if needed
+  baseURL: "https://crud-1-cdxk.onrender.com",
 });
 
 export const createUser = (data) => API.post("/user", data);
