@@ -43,6 +43,7 @@ const Users = () => {
       setShowModal(false);
     } catch (err) {
       errorToast(err.response?.data?.message || "Something went wrong");
+      throw err;
     }
   };
 
@@ -57,6 +58,7 @@ const Users = () => {
       setShowModal(false);
     } catch (err) {
       errorToast(err.response?.data?.message || "Failed to update user ");
+      throw err
     }
   };
 
@@ -73,6 +75,7 @@ const Users = () => {
       successToast("User deleted successfully ");
     } catch (err) {
       errorToast("Failed to delete user ");
+      throw err
     }
   };
 
